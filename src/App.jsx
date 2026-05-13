@@ -20,29 +20,13 @@ const scores =[
 // let newScores = numbers.map(item=>{return item*2})
 // console.log(newScores)
 
-
-
-
-
-
-
-
-
 // let newScores = []
 // for(let i = 0; i < numbers.length; i++){
 //   newScores.push(numbers[i]*2)
 // }
 
-
 // console.log(newScores)
 
-const source = [0,1,2,3]
-tmp = []
-for (let item of source){ //매핑 작업
-  tmp.push(item*2)
-}
-
-Sources.map(item=>(item*2))     //이것도 매핑 작업인데 앞으로 이것만 씀
 
 
 
@@ -54,22 +38,21 @@ function App() {
     
     <table>
       
-      {console.log(newScores)}
     <tr>  
-      <th>이름</th>
-      <th>국어</th>
-      <th>영어</th>
-      <th>수학</th>
-      <th>과학</th>
+      {
+        Object.keys(scores[0]).map(key=>(
+          <th>{key}</th>
+        ))        // scores[0]의 키값들을 배열로 반환
+      }
+      
     </tr>
-    {[0,1,2,3].map(idx => 
+    {scores.map(item => 
     (
     <tr>
-    <td>{scores[idx].이름}</td>
-    <td>{scores[idx].국어}</td>
-    <td>{scores[idx].영어}</td> 
-    <td>{scores[idx].수학}</td>
-    <td>{scores[idx].과학}</td>
+    {Object.values(item).map(
+      (value) => (<td>{value}</td>)
+    )
+    }
     </tr>
     )
   )}
