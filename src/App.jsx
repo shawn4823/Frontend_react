@@ -36,6 +36,16 @@ const scores =[
 
 // console.log(newScores)
 
+const source = [0,1,2,3]
+tmp = []
+for (let item of source){ //매핑 작업
+  tmp.push(item*2)
+}
+
+Sources.map(item=>(item*2))     //이것도 매핑 작업인데 앞으로 이것만 씀
+
+
+
 
 function App() {
   
