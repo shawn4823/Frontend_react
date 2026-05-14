@@ -5,7 +5,7 @@ const scores =[
   { 이름: "Susan",국어: 90, 영어:90, 수학: 80, 과학: 90 },
   { 이름: "sue",국어: 90, 영어:90, 수학: 80, 과학: 90 },
 ]
-function ScoresTable() {
+function ScoresTable({scores}) {
   return (
     
       <table>
